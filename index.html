@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Karisma Parrucchieri | Torino</title>
+
+<meta name="description"
+      content="Karisma Parrucchieri a Torino. Taglio, colore, balayage, piega e trattamenti per valorizzare il tuo stile. Via Francesco De Sanctis 62, Torino.">
+
+<meta name="theme-color" content="#171513">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --black: #171513;
+    --dark: #24201d;
+    --cream: #f6f1eb;
+    --beige: #e9dfd4;
+    --taupe: #b9aa9d;
+    --white: #ffffff;
+    --gold: #b49a7a;
+    --text: #292522;
+    --muted: #746c65;
+    --border: rgba(23,21,19,.13);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    color: white;
+    transition: .3s ease;
+}
+
+.header.scrolled {
+    background: rgba(23,21,19,.96);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.menu-button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-button span {
+    width: 17px;
+    height: 1px;
+    background: white;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: var(--black);
+    color: white;
+    transform: translateY(-100%);
+    transition: .45s ease;
+    padding: 110px 28px 40px;
+}
+
+.menu.open {
+    transform: translateY(0);
+}
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.menu a {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    padding-bottom: 18px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    color: white;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.08),
+            rgba(0,0,0,.72)
+        ),
+        url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1800&q=90");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 25px 55px;
+}
+
+.hero-kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+    opacity: .9;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: clamp(47px, 14vw, 82px);
+    line-height: .98;
+    max-width: 650px;
+}
+
+.hero-text {
+    margin-top: 20px;
+    max-width: 420px;
+    font-size: 15px;
+    color: rgba(255,255,255,.86);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 28px;
+}
+
+.button {
+    min-height: 52px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: .25s ease;
+}
+
+.button-primary {
+    background: white;
+    color: var(--black);
+}
+
+.button-secondary {
+    border: 1px solid rgba(255,255,255,.6);
+    color: white;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    padding: 90px 25px;
+    text-align: center;
+    background: var(--cream);
+}
+
+.eyebrow {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+
+.intro h2,
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(36px, 10vw, 58px);
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+.intro p {
+    max-width: 560px;
+    margin: 24px auto 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: white;
+    padding: 85px 20px;
+}
+
+.section-head {
+    padding: 0 5px 35px;
+}
+
+.section-subtitle {
+    margin-top: 13px;
+    color: var(--muted);
+    max-width: 500px;
+    font-size: 14px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.service {
+    min-height: 150px;
+    padding: 23px 17px;
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: .3s ease;
+}
+
+.service:hover {
+    background: var(--beige);
+    transform: translateY(-3px);
+}
+
+.service-number {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: auto;
+}
+
+.service h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.service p {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* =========================
+   IMAGE FEATURE
+========================= */
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--dark);
+    color: white;
+}
+
+.feature-image {
+    min-height: 450px;
+    background-image:
+        url("https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1200&q=90");
+    background-size: cover;
+    background-position: center;
+}
+
+.feature-content {
+    padding: 65px 25px;
+}
+
+.feature-content .eyebrow {
+    color: #c6b39d;
+}
+
+.feature-content h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.05;
+}
+
+.feature-content p {
+    margin-top: 20px;
+    color: rgba(255,255,255,.7);
+    font-size: 14px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    padding: 85px 20px;
+    background: var(--cream);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 35px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    aspect-ratio: 1 / 1.25;
+}
+
+.gallery-item:nth-child(2) {
+    margin-top: 30px;
+}
+
+.gallery-item:nth-child(3) {
+    margin-top: -15px;
+}
+
+.gallery-item img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+/* =========================
+   CTA
+========================= */
+
+.booking {
+    padding: 90px 25px;
+    background: var(--beige);
+    text-align: center;
+}
+
+.booking h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 11vw, 65px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.booking p {
+    max-width: 430px;
+    margin: 20px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.booking .button {
+    margin-top: 28px;
+    background: var(--black);
+    color: white;
+}
+
+/* =========================
+   LOCATION
+========================= */
+
+.location {
+    padding: 85px 25px;
+    background: white;
+}
+
+.location-grid {
+    display: grid;
+    gap: 40px;
+}
+
+.location h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.location-info {
+    margin-top: 25px;
+}
+
+.location-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.location-value {
+    display: block;
+    margin-top: 7px;
+    font-size: 16px;
+}
+
+.map-button {
+    display: inline-flex;
+    margin-top: 25px;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: var(--black);
+    color: white;
+    padding: 60px 25px 30px;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    letter-spacing: 6px;
+}
+
+.footer-text {
+    margin-top: 18px;
+    color: rgba(255,255,255,.6);
+    max-width: 360px;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 35px;
+}
+
+.footer-links a {
+    font-size: 13px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+    margin-top: 50px;
+    padding-top: 20px;
+    color: rgba(255,255,255,.4);
+    font-size: 11px;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp {
+    position: fixed;
+    right: 17px;
+    bottom: 17px;
+    z-index: 900;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+
+    .header {
+        height: 82px;
+        padding: 0 45px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        transform: none;
+        background: transparent;
+        padding: 0;
+        height: auto;
+    }
+
+    .menu nav {
+        position: fixed;
+        top: 0;
+        right: 45px;
+        height: 82px;
+        flex-direction: row;
+        align-items: center;
+        gap: 28px;
+        z-index: 1001;
+    }
+
+    .menu a {
+        border: none;
+        padding: 0;
+        font-family: "DM Sans", sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-content {
+        padding: 0 7vw 75px;
+    }
+
+    .buttons {
+        flex-direction: row;
+        max-width: 460px;
+    }
+
+    .button {
+        padding: 0 30px;
+    }
+
+    .intro {
+        padding: 130px 30px;
+    }
+
+    .services {
+        padding: 120px 7vw;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+
+    .service {
+        min-height: 220px;
+        padding: 28px;
+    }
+
+    .feature {
+        grid-template-columns: 1fr 1fr;
+        min-height: 650px;
+    }
+
+    .feature-image {
+        min-height: 650px;
+    }
+
+    .feature-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px;
+    }
+
+    .gallery {
+        padding: 120px 7vw;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3) {
+        margin-top: 40px;
+    }
+
+    .location {
+        padding: 120px 7vw;
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .footer {
+        padding: 80px 7vw 35px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header" id="header">
+
+    <a href="#home" class="logo">KARISMA</a>
+
+    <button class="menu-button"
+            id="menuButton"
+            aria-label="Apri menu">
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+<!-- =========================
+     MENU
+========================= -->
+
+<div class="menu" id="menu">
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#chi-siamo">Karisma</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#galleria">Galleria</a>
+        <a href="#prenota">Prenota</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+
+</div>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            Parrucchieri · Torino
+        </div>
+
+        <h1>
+            Il tuo stile.<br>
+            La tua identità.
+        </h1>
+
+        <p class="hero-text">
+            Un momento dedicato a te, ai tuoi capelli
+            e al tuo modo unico di sentirti bene.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#prenota"
+               class="button button-primary">
+                Prenota appuntamento
+            </a>
+
+            <a href="#servizi"
+               class="button button-secondary">
+                Scopri Karisma
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro" id="chi-siamo">
+
+    <div class="eyebrow">
+        KARISMA
+    </div>
+
+    <h2>
+        La bellezza dei tuoi capelli,
+        inizia da qui.
+    </h2>
+
+    <p>
+        Taglio, colore, styling e trattamenti pensati
+        per valorizzare il tuo stile e accompagnarti
+        nella scelta del look che senti davvero tuo.
+    </p>
+
+</section>
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="servizi">
+
+    <div class="section-head">
+
+        <div class="eyebrow">
+            I nostri servizi
+        </div>
+
+        <h2 class="section-title">
+            Tutto ciò che serve
+            al tuo stile.
+        </h2>
+
+        <p class="section-subtitle">
+            Scopri le principali soluzioni dedicate
+            alla cura, alla bellezza e allo styling
+            dei tuoi capelli.
+        </p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <article class="service">
+            <span class="service-number">01</span>
+            <h3>Taglio</h3>
+            <p>Forma, movimento e personalità.</p>
+        </article>
+
+        <article class="service">
+            <span class="service-number">02</span>
+            <h3>Colore</h3>
+            <p>Una nuova tonalità per il tuo stile.</p>
+        </article>
+
+        <article class="service">
+            <span class="service-number">03</span>
+            <h3>Balayage</h3>
+            <p>Schiariture e sfumature naturali.</p>
+        </article>
+
+        <article class="service">
+            <span class="service-number">04</span>
+            <h3>Piega</h3>
+            <p>Il finish che completa il tuo look.</p>
+        </article>
+
+        <article class="service">
+            <span class="service-number">05</span>
+            <h3>Trattamenti</h3>
+            <p>Cura e attenzione per i tuoi capelli.</p>
+        </article>
+
+        <article class="service">
+            <span class="service-number">06</span>
+            <h3>Uomo</h3>
+            <p>Taglio e styling dedicati.</p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FEATURE
+========================= -->
+
+<section class="feature">
+
+    <div class="feature-image"></div>
+
+    <div class="feature-content">
+
+        <div class="eyebrow">
+            La tua bellezza
+        </div>
+
+        <h2>
+            Non un semplice
+            appuntamento.
+        </h2>
+
+        <p>
+            Entrare da Karisma significa concedersi
+            un momento per sé. Un percorso costruito
+            intorno alle tue esigenze, al tuo stile
+            e al risultato che desideri.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery" id="galleria">
+
+    <div class="section-head">
+
+        <div class="eyebrow">
+            Ispirazioni
+        </div>
+
+        <h2 class="section-title">
+            Lasciati ispirare.
+        </h2>
+
+        <p class="section-subtitle">
+            Una selezione di look, colori e dettagli
+            da cui prendere ispirazione.
+        </p>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img
+                src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=900&q=90"
+                alt="Ispirazione capelli">
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=90"
+                alt="Look capelli">
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=90"
+                alt="Styling capelli">
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=90"
+                alt="Colore capelli">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     BOOKING
+========================= -->
+
+<section class="booking" id="prenota">
+
+    <div class="eyebrow">
+        Prenota
+    </div>
+
+    <h2>
+        Il prossimo
+        appuntamento?
+    </h2>
+
+    <p>
+        Contatta Karisma e raccontaci cosa desideri.
+        Ti aiuteremo a trovare il momento giusto
+        per il tuo prossimo look.
+    </p>
+
+    <a
+        class="button"
+        href="https://wa.me/39011724030?text=Ciao%20Karisma%2C%20vorrei%20avere%20informazioni%20per%20un%20appuntamento."
+        target="_blank"
+        rel="noopener">
+        Scrivici su WhatsApp
+    </a>
+
+</section>
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<section class="location" id="contatti">
+
+    <div class="location-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                Dove trovarci
+            </div>
+
+            <h2>
+                Vieni a trovarci
+                a Torino.
+            </h2>
+
+        </div>
+
+        <div>
+
+            <div class="location-info">
+
+                <span class="location-label">
+                    Indirizzo
+                </span>
+
+                <a
+                    class="location-value"
+                    href="https://www.google.com/maps/search/?api=1&query=Karisma%20Via%20Francesco%20De%20Sanctis%2062%20Torino"
+                    target="_blank"
+                    rel="noopener">
+                    Via Francesco De Sanctis 62<br>
+                    10142 Torino
+                </a>
+
+            </div>
+
+            <div class="location-info">
+
+                <span class="location-label">
+                    Telefono
+                </span>
+
+                <a
+                    class="location-value"
+                    href="tel:+39011724030">
+                    011 724030
+                </a>
+
+            </div>
+
+            <div class="location-info">
+
+                <span class="location-label">
+                    Instagram
+                </span>
+
+                <a
+                    class="location-value"
+                    href="https://www.instagram.com/karisma.parrucchieri/"
+                    target="_blank"
+                    rel="noopener">
+                    @karisma.parrucchieri
+                </a>
+
+            </div>
+
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Karisma%20Via%20Francesco%20De%20Sanctis%2062%20Torino"
+                target="_blank"
+                rel="noopener">
+                Apri Google Maps →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        KARISMA
+    </div>
+
+    <p class="footer-text">
+        Parrucchieri a Torino.
+        Il tuo stile, la tua identità.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#servizi">Servizi</a>
+
+        <a href="#galleria">Galleria</a>
+
+        <a href="#prenota">Prenota appuntamento</a>
+
+        <a
+            href="https://www.instagram.com/karisma.parrucchieri/"
+            target="_blank"
+            rel="noopener">
+            Instagram
+        </a>
+
+        <a href="tel:+39011724030">
+            011 724030
+        </a>
+
+    </div>
+
+    <div class="footer-bottom">
+        © <span id="year"></span> Karisma · Torino
+    </div>
+
+</footer>
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/39011724030?text=Ciao%20Karisma%2C%20vorrei%20avere%20informazioni%20per%20un%20appuntamento."
+    target="_blank"
+    rel="noopener"
+    aria-label="Contatta Karisma su WhatsApp">
+    WA
+</a>
+
+<script>
+
+/* =========================
+   HEADER SCROLL
+========================= */
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+});
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuButton = document.getElementById("menuButton");
+const menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", () => {
+
+    menu.classList.toggle("open");
+
+});
+
+document.querySelectorAll(".menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        menu.classList.remove("open");
+    });
+
+});
+
+/* =========================
+   YEAR
+========================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
